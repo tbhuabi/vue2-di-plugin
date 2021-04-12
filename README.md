@@ -4,7 +4,7 @@
 
 ## 安装
 ```
-npm install @tanbo/vue2-di-plugin
+npm install @zhfe/vue2-di-plugin
 ```
 
 ## 配置 tsconfig
@@ -24,7 +24,7 @@ npm install @tanbo/vue2-di-plugin
 根依赖
 ```typescript
 // # deps.ts
-import { Injectable } from '@tanbo/vue2-di-plugin';
+import { Injectable } from '@zhfe/vue2-di-plugin';
 
 @Injectable()
 export class Parent {
@@ -42,7 +42,7 @@ export class Child {
 // # App.vue
 import { defineComponent } from '@vue/composition-api'
 
-import { useRootReflectiveInjector } from '@tanbo/vue2-di-plugin'
+import { useRootReflectiveInjector } from '@zhfe/vue2-di-plugin'
 import { Child, Parent } from './deps'
 
 export default defineComponent({
@@ -58,7 +58,7 @@ export default defineComponent({
 ```typescript
 import { defineComponent } from '@vue/composition-api'
 
-import { useReflectiveInjector } from '@tanbo/vue2-di-plugin'
+import { useReflectiveInjector } from '@zhfe/vue2-di-plugin'
 import { Child } from './deps'
 
 export default defineComponent({

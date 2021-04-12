@@ -1,5 +1,5 @@
 {
-  "name": "@tanbo/vue2-di-plugin",
+  "name": "@zhfe/vue2-di-plugin",
   "version": "0.0.1",
   "description": "A dependency injection Library for vue2",
   "main": "index.js",
