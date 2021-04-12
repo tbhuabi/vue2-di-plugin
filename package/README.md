@@ -62,7 +62,7 @@ import { useReflectiveInjector } from '@zhfe/vue2-di-plugin'
 import { Child } from './deps'
 
 export default defineComponent({
-  name: 'App',
+  name: 'Hello',
   setup() {
     const injector = useReflectiveInjector()
     console.log(injector)
