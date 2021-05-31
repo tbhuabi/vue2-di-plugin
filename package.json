@@ -31,8 +31,8 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
-    "@tanbo/di": "0.0.28",
-    "@vue/composition-api": "^1.0.0-rc.6",
+    "@tanbo/di": "^0.0.32",
+    "@vue/composition-api": "^1.0.0-rc.8",
     "reflect-metadata": "^0.1.13",
     "vue": "^2.6.12"
   }
