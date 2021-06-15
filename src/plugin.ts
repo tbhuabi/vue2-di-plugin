@@ -35,5 +35,6 @@ export function useReflectiveInjector(providers: Provider[] = []) {
 export class TestBad {
   static useReflectiveInjector(providers: Provider[]) {
     replacedContextInjector = new ReflectiveInjector(null, providers)
+    return replacedContextInjector;
   }
 }
