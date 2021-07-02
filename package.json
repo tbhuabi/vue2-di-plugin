@@ -33,7 +33,6 @@
   "dependencies": {
     "@tanbo/di": "^0.0.37",
     "@vue/composition-api": "^1.0.0-rc.8",
-    "reflect-metadata": "^0.1.13",
-    "vue": "^2.6.12"
+    "reflect-metadata": "^0.1.13"
   }
 }
