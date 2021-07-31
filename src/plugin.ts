@@ -1,5 +1,5 @@
 import { inject, InjectionKey, provide } from '@vue/composition-api'
-import { Injector, NullInjector, Provider, ReflectiveInjector } from '@tanbo/di'
+import { Injector, NullInjector, Provider, ReflectiveInjector, Scope } from '@tanbo/di'
 
 const DIInjectKey = Symbol('DIInjectKey') as InjectionKey<Injector>
 
@@ -13,16 +13,16 @@ function createReplacedInjector(providers: Provider[] = []) {
   return injector;
 }
 
-export function useRootReflectiveInjector(providers: Provider[] = []) {
+export function useRootReflectiveInjector(providers: Provider[] = [], scope: Scope = null) {
   if (replacedContextInjector) {
     return createReplacedInjector(providers)
   }
-  const contextInjector = new ReflectiveInjector(new NullInjector(), providers);
+  const contextInjector = new ReflectiveInjector(new NullInjector(), providers, scope);
   provide(DIInjectKey, contextInjector)
   return contextInjector
 }
 
-export function useReflectiveInjector(providers: Provider[] = []) {
+export function useReflectiveInjector(providers: Provider[] = [], scope: Scope = null) {
   if (replacedContextInjector) {
     return createReplacedInjector(providers)
   }
@@ -32,7 +32,7 @@ export function useReflectiveInjector(providers: Provider[] = []) {
   } catch (e) {
     throw new Error('[vue2-di-plugin]: cannot find parentInjector!')
   }
-  const contextInjector = new ReflectiveInjector(parentInjector, providers);
+  const contextInjector = new ReflectiveInjector(parentInjector, providers, scope);
   provide(DIInjectKey, contextInjector)
   return contextInjector
 }
