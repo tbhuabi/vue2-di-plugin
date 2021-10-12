@@ -1,23 +1,22 @@
 {
   "compilerOptions": {
     "declaration": true,
-    "target": "es6",
-    "module": "es6",
+    "target": "es5",
+    "module": "umd",
     "moduleResolution": "node",
     "sourceMap": false,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "lib": [
-      "esnext",
+      "es2018",
       "dom"
     ],
-    "skipLibCheck": true,
     "noImplicitAny": false,
     "suppressImplicitAnyIndexErrors": true,
     "downlevelIteration": true,
     "esModuleInterop": true,
     "baseUrl": "./",
-    "outDir": "package/bundles/esm",
+    "outDir": "package/bundles/umd",
     "paths": {
       "@tanbo/vue2-di-plugin": [
         "src/public-api.ts"
