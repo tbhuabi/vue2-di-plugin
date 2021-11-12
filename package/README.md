@@ -4,7 +4,7 @@
 
 ## 安装
 ```
-npm install @zhfe/vue2-di-plugin
+npm install @tanbo/vue2-di-plugin
 ```
 
 ## 配置 tsconfig
